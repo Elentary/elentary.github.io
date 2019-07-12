@@ -4,10 +4,12 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs>
+    <a-assets>
+        <a-asset-item id="cityModel"
+                      src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+    </a-assets>
     <a-marker preset="hiro">
-        <a-entity
-                obj-model="obj: url(http://elentary.github.io/model.obj); mtl: url(http://elentary.github.io/materials.mtl)">
-        </a-entity>
+        <a-entity gltf-model="#cityModel" modify-materials></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
