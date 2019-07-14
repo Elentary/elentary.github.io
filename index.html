@@ -7,9 +7,14 @@
     <a-assets>
         <a-asset-item id="cityModel"
                       src="https://cdn.jsdelivr.net/gh/elentary/elentary.github.io@master/model.gltf"></a-asset-item>
+        <a-asset-item id="tree-obj"
+                      src="https://cdn.jsdelivr.net/gh/elentary/elentary.github.io@master/model.obj"></a-asset-item>
+        <a-asset-item id="tree-mtl"
+                      src="https://cdn.jsdelivr.net/gh/elentary/elentary.github.io@master/materials.mtl"></a-asset-item>
     </a-assets>
     <a-marker preset="hiro">
-        <a-entity gltf-model="#cityModel" scale="0.001 0.001 0.001"></a-entity>
+        <!--        <a-entity gltf-model="#cityModel" scale="0.001 0.001 0.001"></a-entity>-->
+        <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
